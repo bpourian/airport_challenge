@@ -1,11 +1,17 @@
 require 'weather'
 
 describe Weather do
-  let(:weather) { double :weather }
+  weather = Weather.new
+
   describe '#weather' do
-    it "should check if stormy" do
-      allow(weather).to receive(:stormy?).and_return(true)
+    it "should return true to stormy?" do
+      allow(weather).to receive(:rand).and_return(0)
       expect(weather.stormy?).to eq true
+    end
+
+    it "should return false to stormy?" do
+      allow(weather).to receive(:rand).and_return(1)
+      expect(weather.stormy?).to eq false
     end
   end
 end

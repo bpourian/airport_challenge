@@ -39,5 +39,4 @@ private
   def plane_in_hangar?(plane)
     @airport.include?(plane)
   end
-
 end
